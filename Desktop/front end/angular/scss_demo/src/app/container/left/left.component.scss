@@ -1,0 +1,36 @@
+@mixin white{
+  background-color: white;
+  padding:5px;
+}
+
+.aside{
+  padding:10px;
+  .dl{
+    margin:10px;
+    color:purple;
+    font-size:small;
+    font-weight: 500;
+    svg{
+      float:right;
+    }
+  }
+  .dd{
+    @include white;
+    padding-left:10px;
+    margin:0;
+    button{
+      @include white;
+      display:flex;
+      border:none;
+      vertical-align: middle;
+      width:100%
+    }
+    button:hover{
+      background-color: #eaebef;
+      width:100%
+    }
+    svg{
+      margin:0 7px 0 0;
+    }
+  }
+}

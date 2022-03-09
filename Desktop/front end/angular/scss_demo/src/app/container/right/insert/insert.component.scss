@@ -1,0 +1,18 @@
+.menu{
+  position: absolute;
+  right:30px;
+  top:95px;
+  display: flex;
+  button{
+    border:rgb(214, 214, 214) 0.2px solid;
+    background-color: white;
+    svg{
+      justify-content: center;
+      vertical-align: middle;
+      margin:3px;
+    }
+  }
+  button:hover{
+    background-color: #f1f1f1;
+  }
+}

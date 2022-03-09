@@ -1,0 +1,44 @@
+<div class="content">
+  <div class="middle-right-bottom">
+    <div id="loopRecursion">
+        <ng-container *ngTemplateOutlet="Recursion; context:{ list: data}"></ng-container>
+    </div>
+
+    <ng-template #Recursion let-list="list">
+        <div *ngFor="let item of list">
+            <input type="checkbox" name="checker" checked="checked" id="checker" *ngIf="item.child.length > 0">
+            <div class="expand">
+                <div class="col" style="display: flex; ">
+                    <i class="bi bi-chevron-up" style="padding :0 10px 0 10px;" *ngIf="item.child.length > 0"></i>
+                    <i class="bi bi-diagram-3-fill" style="color: rgb(6, 130, 247);padding :0 5px 0 10px;" *ngIf="item.id != 'Mã'"></i>
+                    <span>{{ item.name }}</span>
+                </div>
+                <div class="col">
+                    <span>{{ item.id }}</span>
+                </div>
+                <div class="col">
+                    <span>{{ item.description }}</span>
+                </div>
+                <div id="col" class="col" style="padding-right: 4px; display: flex; ">
+                    <a id="link" href="popup">
+                        <button id="add">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                    <button id="edit" *ngIf="item.id != 'Mã'">
+                        <i class="bi bi-pencil-fill"></i>
+                    </button>
+                    <button id="remove" *ngIf="item.id != 'Mã'">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="toolTip">{{ item.name }}</div>
+
+            <div *ngIf="item.child.length > 0" class="list">
+                <ng-container *ngTemplateOutlet="Recursion; context:{ list: item.child }"></ng-container>
+            </div>
+        </div>
+    </ng-template>
+  </div>
+</div>

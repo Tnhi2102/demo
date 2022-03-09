@@ -1,0 +1,151 @@
+@mixin border{
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 4px;
+}
+
+@mixin limit{
+  background-color:#f7f9fa;
+  border-top: solid #e0e0e0 1px;
+
+}
+
+*{
+  font-size: small;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.397);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+}
+.wrap {
+  width:40%;
+  background-color: white;
+}
+input{
+  @include border;
+}
+
+textarea{
+  @include border;
+  color:rgb(142, 142, 142);
+}
+.header{
+  @include limit;
+  p{
+    font-size: 30px;
+    font-weight: 100;
+    padding:5px 0 5px 20px;
+    margin:0;
+  }
+}
+.new{
+  padding:20px;
+  .row{
+    padding:0;
+    .col-sm-4 .ma{
+      width:155px
+    }
+    .col-sm-8 .ten{
+      width:300px;
+    }
+  }
+  .radio{
+    display: flex;
+    .item{
+      margin:0 60px 0 0;
+      display: inline-block;
+    }
+  }
+  .chinhanh{
+    margin:0 0 10px 0;
+    label{
+      margin:10px 0;
+    }
+    select{
+      width:465px;
+      padding:5px;
+      border: 1px solid rgb(223, 223, 223);
+      border-radius: 4px;
+      color:rgb(142, 142, 142);
+    }
+  }
+  .mota textarea{
+    width:465px;
+    padding:5px 0 0 10px;
+  }
+  .ghichu textarea{
+    width:465px;
+  }
+  .stt input{
+    width:110px;
+    padding:3px 0 3px 10px;
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-left:40px;
+  cursor: pointer;
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  :hover input ~ .check{
+    background-color: #068304;
+  }
+  input:checked ~ .check img{
+    opacity: 1;
+  }
+}
+
+.check{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border: 2px #068304 solid;
+  border-radius: 50%;
+  img{
+    position: absolute;
+    top: -4px;
+    left:-4px;
+    opacity: 0;
+  }
+}
+
+.footer{
+  @include limit;
+  height:60px;
+  padding:10px 0px;
+  div{
+    margin-right:15px;
+  }
+  button{
+    @include border;
+    float:right;
+    padding:2px 10px 5px;
+  }
+  .close{
+    background-color: rgb(255,255,255);
+    color:black;
+  }
+  .save{
+    margin:0 0 0 5px;
+    color:white;
+    background-color: rgb(45,45,86);
+  }
+}
