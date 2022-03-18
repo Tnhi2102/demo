@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content" *ngFor="let item of data">
+      <div class="title">
+
+        <img *ngIf="data.indexOf(item) %2 == 0 && data.indexOf(item) != 0" [style] = "item.styleimg"  src={{item.img}}>
+
+        <div  class="noidung" [style]="item.stylebg">
+          <div class="num"> {{item.num}} </div>
+          <div class="name">
+            <svg width="2" height="48" viewBox="0 0 2 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="2" height="48" fill="#E2E2E2"/>
+            </svg>
+              <span [style]="item.styletitle">{{item.title}}</span>
+          </div>
+          <div class="text" [style]="item.styletext">{{item.text}}</div>
+        </div>
+
+        <img *ngIf="data.indexOf(item) %2 != 0 || data.indexOf(item) == 0" [style] = "item.styleimg" src={{item.img}}>
+<!--end title-->
+      </div>
+      <div class="history" *ngIf="item.child" >
+        <div *ngFor="let day of item.child" class="item">
+          <svg style="margin: 10px 13px 41px 0;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="3" cy="3" r="3" fill="#8DC63F"/>
+          </svg>
+          <div class="a">{{day.a}}</div>
+          <div class="b">{{day.b}}</div>
+        </div>
+      </div>
+      <div *ngIf="item.pc" class="pc">
+        <div *ngFor="let nd of item.pc" [style]="nd.styletext">{{nd.text}}</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+

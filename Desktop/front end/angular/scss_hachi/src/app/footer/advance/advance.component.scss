@@ -1,0 +1,29 @@
+body{
+  background-color:inherit;
+  color:white;
+}
+.text{
+  margin:0 0 0 160px;
+  padding: 48px 0 0 0 ;
+  display:flex;
+  .item{
+    margin:0 24px 0 0;
+    width:222px;
+    font-size: 13px;
+    .title{
+      color:#8DC63F;
+      font-family: "Nunito";
+      font-weight: 700;
+    }
+    .content{
+      margin:5px 0 0 0;
+      font-family: "Roboto";
+      font-weight: 400;
+      line-height: 23px;
+      svg{
+        margin: 0 12px 0 0;
+        color:#868B86
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Nunito:wght@200;400;700;900&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap');
+
+@mixin bg{
+  margin:0;
+  padding:0;
+  background-color: #f6f7f7;
+  font-size: 13px;
+}
+
+body{
+  @include bg;
+}
+
+.content{
+  @include bg;
+  .path{
+    width:100%;
+    display:flex;
+    padding: 19.75px 0 25px 160px;
+    font-family: 'Nunito', sans-serif;
+    color:#868B86;
+    font-weight: 400;
+    svg{
+      margin:3.4px 12.6px 0 12.6px;
+    }
+  }
+}

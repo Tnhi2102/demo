@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Nunito:wght@200;400;700;900&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap');
+
+a {
+  text-decoration: none;
+  color:inherit;
+  display:flex;
+}
+
+.header{
+  .use{
+    display:flex;
+    background-color: #edeeed;
+    height: 32px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    .lang {
+      display: flex;
+      padding:7px 0 9px 216px;
+      font-size: 13px;
+      color: #626662;
+      .text{
+        padding:0 6px 0 6px;
+      }
+    }
+    .login{
+      padding-left:400px;
+      display: flex;
+      color: #649E0F;
+      .icon1{
+        margin:6px 11px 0 0;
+        width:14px;
+        height:15.43px;
+      }
+      .acc{
+        margin:7px 0 0 0;
+        width:65px;
+      }
+    }
+    .donhang{
+      display:flex;
+      .icon{
+        margin:5px 0 0 0;
+      }
+      .text{
+        margin:7px 14px 7.06px 11px;
+        color:#353935;
+        width:115px;
+      }
+    }
+    .giohang{
+      display:flex;
+      .icon{
+        padding: 5.54px 10px 0 0 ;
+      }
+      .text{
+        padding: 7px 0 0 0 ;
+        color:#353935;
+        margin: 0 11px 0 0 ;
+        width:55px;
+      }
+      .num{
+        margin: 5.65px 0 0 0 ;
+        padding: 1px 0 4.64px 3px;
+        background-color: #FF5230;
+        color: white;
+        height:22px;
+        width:27.56px;
+        border-radius: 3px;
+        font-weight: 800;
+      }
+    }
+  }
+  .search{
+    display: flex;
+    height:68.8px;
+    background-color: white;
+    .logo{
+      width:150px;
+      height:52.75px;
+      margin: 9.12px 134px 7.18px 180px;
+    }
+    .searcharea{
+      display:flex;
+      padding: 20px 104px 0 0 ;
+      input{
+        height:35px;
+        width:352px;
+        font-size: 11px;
+        border: solid 1px #8DC63F;
+        box-shadow: 0px 3px 4px rgba(53, 57, 53, 0.1);
+        border-radius: 3px;
+        padding:11px 0 12px 10px;
+      }
+      .icon{
+        margin: 0 0 13.05px -35px;
+        color:white;
+        background-color: #8DC63F;
+        width:36px;
+        height:35px;
+        border: solid 1px #8DC63F;
+        box-shadow: 0px 3px 4px rgba(53, 57, 53, 0.1);
+        border-radius: 3px;
+        svg{
+          margin:7px 0 0 10px;
+        }
+      }
+    }
+    .hotline{
+      display:flex;
+      .text{
+        padding: 30.89px 7px 0 0;
+        color:#868B86;
+      }
+      .num{
+        padding:31px 0 0 0;
+        color:#8BC541;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Roboto";
+        line-height: 152.34%;
+      }
+    }
+  }
+  .navmenu{
+    display: flex;
+    color:white;
+    background-color: #565656;
+    font-size: 13px;
+    height:49.2px;
+    ul{
+      margin: 15.36px 0 15.36px 167px;
+      padding:0;
+      display:flex;
+      li{
+        display:flex;
+        justify-content: center;
+        margin:0 15px 0 0;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        svg{
+          margin:0 0 0 16px;
+        }
+      }
+    }
+  }
+}
